@@ -1,0 +1,63 @@
+:root {
+  --header-background: #7DE6C6;
+  --body-background: #2E2F49;
+  --header-title: #474971;
+  --main-color: white;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-background);
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--header-background);
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.nav-header span {
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.nav-header .split {
+  align-items: flex-end;
+  height: 30px;
+  margin-top: 20px;
+  border-right: var(--header-title) 2px solid; 
+}
+
+.nav-header h3 {
+  align-items: flex-start;
+  height: 20px;
+  padding-top: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: var(--header-title)
+}
+
+.list-container {
+  display: flex;
+  width: 100%;
+}
+
+.list-row {
+  padding: 15px 20px;
+  flex-direction: row;
+  border-bottom: var(--main-color) 1.5px solid;
+}
+
