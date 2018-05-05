@@ -51,13 +51,22 @@ body {
 }
 
 .list-container {
-  display: flex;
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.list-item {
+
 }
 
 .list-row {
   padding: 15px 20px;
   flex-direction: row;
   border-bottom: var(--main-color) 1.5px solid;
+}
+
+.list-row-cell {
+
 }
 
