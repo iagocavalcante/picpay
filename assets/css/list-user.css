@@ -26,36 +26,14 @@ body {
   transition: 0.3s;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .nav-header {
     display: flex;
     flex-direction: row;
     background-color: var(--header-background);
-    /* position: fixed; */
+    position: fixed;
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-  }
-}
-
-.header {
-  display: flex;
-  flex-direction: row;
-  background-color: var(--header-background);
-  position: fixed;
-  width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-}
-
-@media (min-width: 600px) {
-  .header {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    margin: 0 auto;
-    width: 50%;
-    box-shadow: none;
     transition: 0.3s;
   }
 }
@@ -65,8 +43,8 @@ body {
   width: 35px;
   height: 35px;
   padding-left: 20px;
-  margin-top: 10px;
-  margin-right: 20px;
+  margin-top: 21px;
+  margin-right: 14px;
 }
 
 .nav-header .split {
@@ -86,6 +64,28 @@ body {
   color: var(--header-title)
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--header-background);
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+@media (min-width: 769px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+    box-shadow: none;
+    transition: 0.3s;
+  }
+}
+
 .list-container {
   display: block;
   margin: 0 auto;
@@ -95,9 +95,8 @@ body {
   background-image: linear-gradient(264deg, var(--dusk), var(--dark));
 }
 
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .list-container {
-    padding-top: 0;
     display: block;
     margin: 0 auto;
     width: 50%;
@@ -131,18 +130,27 @@ body {
 .list-row .description{
   flex: 3;
   color: var(--main-color);
-  padding-left: 10px;
+  padding-left: 14px;
+  font-size:  0.85em;
+  align-items: center;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .list-row .description{
     flex: 5;
     color: var(--main-color);
   }
 }
 
-.list-row .description h3{
-  margin: 10px 0 0 0;
+.list-row .description h2{
+  margin: 15px 0 0 0;
+  font-size: 0.9em;
+}
+
+@media (min-width: 768px) {  
+  .list-row .description h2{
+    margin: 15px 0 0 0;
+  }
 }
 
 .list-row .description p{
@@ -151,27 +159,49 @@ body {
   font-size: 0.8em;
 }
 
+@media (min-width: 768px) {
+  .list-row .description p{
+    display: inline;
+    margin: 5px 0 0 0;
+    font-size: 1.3em;
+  }
+}
+
 .list-row .pay{
-  flex: 1;
   display: inline-block;
+  margin: 0 0 0 0.45em;
 }
 
 @media (min-width: 769px) {
   .list-row .pay{
-    flex: 3;
+    flex: 4;
+    align-items: center;
     display: inline-block;
   }
 }
 
-.list-row .pay button{
-  border-radius: 30px;
-  border: 0;
-  height: 40px;
-  width: 40px;
-  background-color: #95edd4;
-  color: var(--body-background);
-  font-size: 1.6em;
-  margin: 10px 0 10px 0;
+@media (min-width: 768px) and (max-width: 769px) {
+  .list-row .pay{
+    flex: 2;
+    align-items: center;
+    display: inline-block;
+  }
+}
+
+.list-row .pay img{
+  margin: 15px 0 0 0;
+}
+
+@media (min-width: 769px) {
+  .list-row .pay img{
+    padding-left: 12px;
+  }    
+}
+
+@media (min-width: 768px) and (max-width: 769px) {
+  .list-row .pay img{
+    padding-left: 14px;
+  } 
 }
 
 .list-row .pay a {
@@ -184,15 +214,19 @@ body {
   font-size: 1.1em;
   margin: 0;
   padding: 0 0 0 10px;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .list-row .pay .text-pagar{
-    display: inline;
+    display: table-caption;
     color: var(--main-color);
-    font-size: 1.1em;
-    margin: 0;
-    padding: 0 0 0 10px;
+    padding: 10px 0 0 10px;
+    font-weight: 700;
+    font-size: 1.25em;
   }
 }
 
@@ -203,7 +237,7 @@ body {
   margin: 0 0 0 11px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .list-row .pay .arrow{
     color: var(--main-color);
     font-size: 1.8em;

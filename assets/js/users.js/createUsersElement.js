@@ -6,15 +6,15 @@ const createUserElement = ( user ) => {
         </span>
       </div>
       <div class="list-row-cell description">
-        <h3>${user.name}</h3>
+        <h2>${user.name}</h2>
         <p>id: ${user.id}</p>
         <p>${user.username}</p>
       </div>
       <div class="list-row-cell pay">
-        <button>$</button>
+        <img src="./assets/img/pagar.svg">
         <a href="#">
           <p class="text-pagar">PAGAR</p>
-          <p class="arrow">❭</p>
+          <img src="./assets/img/down.svg">
         </a>
       </div>
     </div>`
