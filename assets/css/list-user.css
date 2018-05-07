@@ -1,6 +1,8 @@
 :root {
   --header-background: #7DE6C6;
   --body-background: #2E2F49;
+  --dusk: #3c3e64;
+  --dark: #1d1e2a;
   --header-title: #474971;
   --main-color: white;
 }
@@ -36,6 +38,28 @@ body {
   }
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--header-background);
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+@media (min-width: 600px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+    box-shadow: none;
+    transition: 0.3s;
+  }
+}
+
 .nav-header span {
   align-items: center;
   width: 35px;
@@ -66,11 +90,14 @@ body {
   display: block;
   margin: 0 auto;
   width: 100%;
-  background-color: var(--body-background);
+  padding-top: 65px;
+  background-image: linear-gradient(264deg, #3c3e64, #1d1e2a);
+  background-image: linear-gradient(264deg, var(--dusk), var(--dark));
 }
 
 @media (min-width: 600px) {
   .list-container {
+    padding-top: 0;
     display: block;
     margin: 0 auto;
     width: 50%;
@@ -104,9 +131,10 @@ body {
 .list-row .description{
   flex: 3;
   color: var(--main-color);
+  padding-left: 10px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .list-row .description{
     flex: 5;
     color: var(--main-color);
@@ -128,9 +156,9 @@ body {
   display: inline-block;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 769px) {
   .list-row .pay{
-    flex: 2;
+    flex: 3;
     display: inline-block;
   }
 }
@@ -146,10 +174,42 @@ body {
   margin: 10px 0 10px 0;
 }
 
-.list-row .pay p{
-  display: inline;
+.list-row .pay a {
+  text-decoration: none;
+}
+
+.list-row .pay .text-pagar{
+  display: none;
+  color: var(--main-color);
+  font-size: 1.1em;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 10px;
+}
+
+@media (min-width: 769px) {
+  .list-row .pay .text-pagar{
+    display: inline;
+    color: var(--main-color);
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0 0 0 10px;
+  }
+}
+
+.list-row .pay .arrow{
+  color: var(--main-color);
+  font-size: 1.8em;
+  display: inline;
+  margin: 0 0 0 11px;
+}
+
+@media (min-width: 769px) {
+  .list-row .pay .arrow{
+    color: var(--main-color);
+    font-size: 1.8em;
+    margin: 0px 0 24px 15px;
+    display: inline;
+  }
 }
 
 .list-row-cell {

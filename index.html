@@ -6,37 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PicPay</title>
   <link rel="stylesheet" href="./assets/css/list-user.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
-    crossorigin="anonymous">
 </head>
 <body>
   <nav class="nav-header">
-    <span>
-      <img src="./assets/img/picpaylogo.PNG" alt="">
-    </span>
-    <div class="split"></div>
-    <h3>Front-End Test</h3>
+    <div class="header">
+      <span>
+        <img src="./assets/img/picpaylogo.PNG" alt="">
+      </span>
+      <div class="split"></div>
+      <h3>Front-End Test</h3>
+    </div>
   </nav>
   <div class="list-container">
-    <div class="list-item">
-      <div class="list-row">
-        <div class="list-row-cell pic">
-          <span>
-            <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="">
-          </span>
-        </div>
-        <div class="list-row-cell description">
-          <h3>Nome do usuário</h3>
-          <p>id: 213443</p>
-          <p>@username</p>
-        </div>
-        <div class="list-row-cell pay">
-          <button>$</button>
-          <!-- <p>pagar</p> -->
-          <p>></p>
-        </div>
-      </div>
-    </div>
+    <div class="list-item"></div>
   </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+<script src="./assets/js/users.js/createUsersElement.js"></script>
+<script src="./assets/js/users.js/fetchUser.js"></script>
+<script>
+  fetchUser()
+</script>
 </html>
