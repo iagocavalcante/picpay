@@ -125,7 +125,14 @@ body {
 
 .list-row .pay{
   flex: 1;
-  align-content: center;
+  display: inline-block;
+}
+
+@media (min-width: 600px) {
+  .list-row .pay{
+    flex: 2;
+    display: inline-block;
+  }
 }
 
 .list-row .pay button{
@@ -133,16 +140,16 @@ body {
   border: 0;
   height: 40px;
   width: 40px;
-  margin: 10px 0 0 0;
   background-color: #95edd4;
   color: var(--body-background);
   font-size: 1.6em;
+  margin: 10px 0 10px 0;
 }
 
-.list-row .pay span i .arrow {
-  background-image: url('./../img/arrow-point-to-right.svg');
-  height: 40px;
-  width: 40px;
+.list-row .pay p{
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
 
 .list-row-cell {
