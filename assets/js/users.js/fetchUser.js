@@ -5,6 +5,7 @@ const fetchUser = () => {
       listContainer.innerHTML = ''
       response.data.forEach( user => {
         listContainer.innerHTML += createUserElement( user )
+        listContainer.innerHTML += createPaymentModal( user )
       })
     })
     .catch( err => window.alert('Não foi possível recuperar os usuários!'))

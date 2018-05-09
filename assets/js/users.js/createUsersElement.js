@@ -12,7 +12,7 @@ const createUserElement = ( user ) => {
       </div>
       <div class="list-row-cell pay">
         <img src="./assets/img/pagar.svg">
-        <a href="#">
+        <a href="#" id="${user.id}">
           <p class="text-pagar">PAGAR</p>
           <img src="./assets/img/down.svg">
         </a>
