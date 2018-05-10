@@ -15,8 +15,8 @@
   display: none;
 }
 .modal:before {
+  display: none;
   content:"";
-  display: block;
   background: rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0;
@@ -26,6 +26,7 @@
   z-index: 10;
 }
 .modal .modal-dialog {
+  display: none;
   width: 440px;
   border-radius: 6px;
   background-color: #ffffff;
