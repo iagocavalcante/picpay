@@ -1,8 +1,10 @@
 const showModal = ( index, id ) => {
-  debugger
-  const elementSelected = document.querySelector(`#${index}`)
-  const modal = document.querySelector(`#${id}`)
+  const elementSelected = document.getElementById(`${index}`)
+  const modal = document.getElementById(`${id}`)
+  const dialog = document.getElementById(`dialog${id}`)
   elementSelected.addEventListener('click', function() {
-    console.log(modal)
+    modal.style.display = 'block'
+    dialog.style.display = 'block'
+    document.styleSheets[0].addRule('modal:before', 'display:block');
   })
 }

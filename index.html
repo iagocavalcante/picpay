@@ -24,13 +24,27 @@
     <div class="list-item"></div>
   </div>
 </body>
+<script src="./assets/js/pseudoStyle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 <script src="./assets/js/users.js/showModal.js"></script>
 <script src="./assets/js/users.js/fetchUser.js"></script>
 <script src="./assets/js/users.js/createUsersElement.js"></script>
 <script src="./assets/js/users.js/createPaymentModal.js"></script>
 <script>
-  fetchUser()
+  fetchUser().then( response => {
+    listContainer.innerHTML = ''
+    response.data.forEach((user, index) => {
+      listContainer.innerHTML += createUserElement(user, index)
+      listContainer.innerHTML += createPaymentModal(user)
+    })
+    return response.data
+  })
+  .then( users => {
+    users.forEach((user, index) => {
+      showModal(index, user.id)
+    })
+  }) 
+  .catch(err => window.alert('Não foi possível recuperar os usuários!'))
 </script>
 
 </html>
